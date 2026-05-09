@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática: Porcentagem - Trabalho 2</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Configurações Gerais - Layout de 1 coluna [cite: 17] */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Menu Flexbox [cite: 25] */
+        nav {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .menu-flex {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .menu-flex li a {
+            display: block;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .menu-flex li a:hover {
+            background-color: var(--accent-color);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Requisito: Sessão 1 maior que a tela [cite: 29] */
+        #sessao1 {
+            min-height: 110vh; 
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+        }
+
+        /* Galeria Flexbox [cite: 31] */
+        .galeria-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .galeria-flex img {
+            width: calc(25% - 15px); 
+            min-width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .figura-texto {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .figura-texto img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+
+        .voltar-topo {
+            display: block;
+            margin-top: 30px;
+            text-align: right;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsividade conforme requisito (375px a 1920px) [cite: 34] */
+        @media (max-width: 768px) {
+            .galeria-flex img {
+                width: calc(50% - 15px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .galeria-flex img {
+                width: 100%;
+            }
+            .menu-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="inicio">
+        <img src="img/logo.png" alt="Logotipo Matemática Educativa">
+    </header>
+
+    <nav>
+        <ul class="menu-flex">
+            <li><a href="#sessao1">Teoria</a></li>
+            <li><a href="#sessao2">Galeria</a></li>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#contato">Identificação</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="sessao1">
+            <h1>Porcentagem: Regra de Três e Fator Decimal</h1>
+            <p>A porcentagem é uma ferramenta essencial da matemática aplicada, usada para representar partes de um todo de forma padronizada em base 100.</p>
+            
+            <h2>Cálculo por Regra de Três</h2>
+            <p>A regra de três é o método mais seguro para iniciantes. Basta alinhar os valores e as porcentagens correspondentes para encontrar a incógnita.</p>
+            
+            <div class="figura-texto">
+                <img src="img/regra-tres.png" alt="Esquema de Regra de Três"> <p><em>Esquema visual da montagem de uma regra de três simples.</em></p>
+            </div>
+
+            <h2>Cálculo por Fator Decimal</h2>
+            <p>O método decimal é mais direto: transforma-se a porcentagem em um número decimal (ex: 15% vira 0,15) e multiplica-se pelo valor desejado.</p>
+            
+            <div class="figura-texto">
+                <img src="img/calculo-decimal.png" alt="Exemplo de cálculo decimal"> <p><em>Exemplo de conversão e multiplicação direta.</em></p>
+            </div>
+
+            <p>Dominar essas duas formas de cálculo garante agilidade na resolução de problemas cotidianos e acadêmicos.</p>
+
+            <a href="#inicio" class="voltar-topo">↑ Voltar ao topo</a> </section>
+
+        <section id="sessao2">
+            <h2>Aplicações Práticas</h2>
+            <div class="galeria-flex">
+                <img src="img/foto1.jpg" alt="Gráfico estatístico">
+                <img src="img/foto2.jpg" alt="Descontos comerciais">
+                <img src="img/foto3.jpg" alt="Juros financeiros">
+                <img src="img/foto4.jpg" alt="Cálculo de taxas">
+            </div>
+
+            <a href="#inicio" class="voltar-topo">↑ Voltar ao topo</a> </section>
+    </main>
+
+    <footer id="contato">
+        <p>Desenvolvido por: Ilgner Lauriente Vahl</p>
+       </footer>
+
+</body>
+</html>
